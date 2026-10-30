@@ -1,0 +1,67 @@
+{
+  "data_source": "https://peps.python.org/api/peps.json",
+  "metrics": {
+    "P1": {
+      "accepted_limbo": 9,
+      "accepted_total": 317,
+      "share": 0.028391167192429023
+    },
+    "P2": {
+      "aged_drafts": 38,
+      "dated_peps": 747,
+      "share": 0.050870147255689425
+    },
+    "P3": {
+      "n_process": 53,
+      "n_standards_track": 588,
+      "process_negative_share": 0.3018867924528302,
+      "standards_track_negative_share": 0.3163265306122449
+    },
+    "P4": {
+      "final_median_authors": 1,
+      "n_final": 375,
+      "n_rejwd": 206,
+      "rejwd_median_authors": 1.0
+    },
+    "P5": {
+      "n_with_version": 485,
+      "n_without_version": 103,
+      "with_version_final_share": 0.5628865979381443,
+      "without_version_final_share": 0.33980582524271846
+    },
+    "excluded_no_date": 0,
+    "n_peps": 747,
+    "status_hist": {
+      "Accepted": 11,
+      "Active": 38,
+      "Deferred": 35,
+      "Draft": 56,
+      "Final": 375,
+      "Provisional": 1,
+      "Rejected": 132,
+      "Superseded": 25,
+      "Withdrawn": 74
+    },
+    "type_hist": {
+      "Informational": 106,
+      "Process": 53,
+      "Standards Track": 588
+    }
+  },
+  "snapshot_date": "2026-10-30",
+  "spotcheck_status": {
+    "3150": "Deferred",
+    "484": "Final",
+    "505": "Deferred",
+    "563": "Superseded",
+    "649": "Final",
+    "8": "Active"
+  },
+  "verdicts": {
+    "P1": "REVERSED",
+    "P2": "HELD",
+    "P3": "NULL",
+    "P4": "NULL",
+    "P5": "HELD"
+  }
+}
