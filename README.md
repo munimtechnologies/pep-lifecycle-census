@@ -50,19 +50,41 @@ packaging PEP Final because "tools have not rolled out support". PEP 1 itself se
 for every PEP: Final once the reference implementation is complete and merged. So in this
 snapshot, the remaining Accepted backlog is a packaging convention, not general neglect.
 
-That breakdown was noticed after the job ran, so it is **exploratory**. A pre-registered
-follow-up that measures it from the index file, `followups/topic/`, is filed and will be
-reported here when it runs.
+That breakdown was noticed after the job ran. Follow-up 1 (below) measures it from the
+index file.
+
+## Follow-up 1: topic, age thresholds, P5 without packaging
+
+`followups/topic/PREREG.md` was published before its job ran. It says plainly that none of
+its three predictions is fully blind: it is a robustness check on run 1, run on the same
+snapshot. Raw output: `results/followup1-summary.json`.
+
+| | Prediction | Measured | Verdict |
+|---|---|---|---|
+| F1 (confirmatory) | Accepted share among Accepted+Final Standards Track PEPs: above 0.10 for packaging, below 0.02 for the rest | packaging 8 of 47 (17.0%); others 1 of 270 (0.4%, PEP 828) | HELD |
+| F2 (partly informed) | Draft/Deferred PEPs created at least 10 years before the snapshot are above 3% of all PEPs | 30 of 747 (4.0%) | HELD |
+| F3 (partly informed) | Without packaging PEPs, the Final share with a Python-Version header exceeds the share without by more than 0.10 | 56.7% (of 469) vs 9.4% (3 of 32): 0.47 | HELD |
+
+What this adds:
+
+- **F1:** the index file confirms the live pages. An accepted packaging PEP is more than 40
+  times as likely as any other accepted PEP to still be marked Accepted (17.0% vs 0.4%).
+- **F2:** the old backlog is mostly Deferred. Of the 38 Draft or Deferred PEPs at least five
+  years old, 32 are Deferred and 6 are Draft. 30 of the 38 are at least ten years old.
+- **F3:** packaging PEPs were not driving P5; they were diluting it. With them removed, only
+  3 of the 32 non-packaging Standards Track PEPs without a Python-Version header are Final.
+  This is still an association. A missing header mostly marks a PEP that never got as far
+  as targeting a release.
 
 ## Honest limits
 
 - This is one snapshot. Statuses are kept by editors, and P1 shows that cleanup campaigns
   can move them a lot. A census taken before those campaigns might have found P1 HELD (not
   checked).
-- P2 passed its threshold by one PEP.
-- P5 is an association, not a cause. Editors can add or change the Python-Version header
-  after acceptance, and packaging PEPs (most of them Final) usually have no Python-Version
-  header at all. The follow-up repeats P5 without packaging PEPs.
+- P2 passed its threshold by one PEP. F2 shows the backlog is real at a 10-year threshold
+  too, but F2 was partly informed.
+- P5 and F3 are associations, not causes. Editors can add or change the Python-Version
+  header after acceptance.
 - The index has no resolution dates (`resolution` is a link), so nothing here measures time
   to decision.
 
@@ -77,6 +99,7 @@ about outcomes across the whole corpus.
 
     python -m unittest -v
     python job.py --data-dir ./data --out-dir ./out --allow-net
+    cd followups/topic && python -m unittest -v && python topic_job.py --data-dir ../../data --out-dir ../../out-followup --snapshot 2026-10-30 --allow-net
 
 Standard library only, Python 3.10 or newer.
 

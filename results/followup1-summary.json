@@ -1,0 +1,120 @@
+{
+  "data_source": "https://peps.python.org/api/peps.json",
+  "metrics": {
+    "F1": {
+      "other": {
+        "limbo": 1,
+        "limbo_peps": [
+          828
+        ],
+        "share": 0.003703703703703704,
+        "total": 270
+      },
+      "packaging": {
+        "limbo": 8,
+        "limbo_peps": [
+          458,
+          658,
+          714,
+          739,
+          752,
+          783,
+          794,
+          808
+        ],
+        "share": 0.1702127659574468,
+        "total": 47
+      }
+    },
+    "F2": {
+      "10y": {
+        "n": 30,
+        "share": 0.040160642570281124
+      },
+      "4y": {
+        "n": 40,
+        "share": 0.0535475234270415
+      },
+      "5y": {
+        "n": 38,
+        "share": 0.050870147255689425
+      },
+      "aged5_peps": {
+        "Deferred": [
+          213,
+          219,
+          222,
+          233,
+          267,
+          269,
+          280,
+          286,
+          312,
+          316,
+          323,
+          337,
+          368,
+          400,
+          403,
+          407,
+          419,
+          423,
+          444,
+          447,
+          491,
+          499,
+          505,
+          532,
+          533,
+          535,
+          547,
+          556,
+          568,
+          3124,
+          3143,
+          3150
+        ],
+        "Draft": [
+          467,
+          480,
+          603,
+          638,
+          653,
+          671
+        ]
+      },
+      "dated_peps": 747,
+      "excluded_no_date": 0
+    },
+    "F3": {
+      "all_standards_track": {
+        "diff": 0.22308077269542587,
+        "n_with_version": 485,
+        "n_without_version": 103,
+        "with_version_final_share": 0.5628865979381443,
+        "without_version_final_share": 0.33980582524271846
+      },
+      "non_packaging": {
+        "diff": 0.4734141791044776,
+        "n_with_version": 469,
+        "n_without_version": 32,
+        "with_version_final_share": 0.5671641791044776,
+        "without_version_final_share": 0.09375
+      }
+    },
+    "n_peps": 747,
+    "topic_hist": {
+      "(none)": 545,
+      "governance": 26,
+      "packaging": 104,
+      "release": 27,
+      "typing": 49
+    }
+  },
+  "snapshot_date": "2026-10-30",
+  "verdicts": {
+    "F1": "HELD",
+    "F2": "HELD",
+    "F3": "HELD"
+  }
+}
